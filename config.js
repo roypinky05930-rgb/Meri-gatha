@@ -10,3 +10,5 @@ window.MERI_GATHA_CONFIG = {
   supabaseUrl: https://izwcxwhbyypmcidfrwti.supabase.co
   supabaseKey: sb_publishable_1wQl7Jju-6bJJhEelkx4jQ_DjwLW6Sm
 };
+
+\]
