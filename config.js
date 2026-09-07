@@ -7,6 +7,6 @@
   4. NEVER put a service_role/secret key in this file.
 */
 window.MERI_GATHA_CONFIG = {
-  supabaseUrl: "PASTE_YOUR_SUPABASE_PROJECT_URL_HERE",
-  supabaseKey: "PASTE_YOUR_SUPABASE_PUBLISHABLE_KEY_HERE"
+  supabaseUrl: https://izwcxwhbyypmcidfrwti.supabase.co
+  supabaseKey: sb_publishable_1wQl7Jju-6bJJhEelkx4jQ_DjwLW6Sm
 };
