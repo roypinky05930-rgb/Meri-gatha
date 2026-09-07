@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meri Gatha — a vintage community space for Shayari, thoughts and feelings.">
+  <title>Meri Gatha — Shayari & Feelings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Meri Gatha home"><span class="rose">✦</span><span>Meri Gatha</span></a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#my-gatha">My Gatha</a>
+      <a href="#your-thought">Your Thought</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle softer theme">☾</button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-glow"></div>
+      <div class="hero-copy">
+        <p class="eyebrow">A quiet corner for words & feelings</p>
+        <h1>Meri <span>Gatha</span></h1>
+        <div class="ornament">— ✦ —</div>
+        <p class="tagline">“Some stories are not just told, they are felt.”</p>
+        <a class="primary-btn" href="#my-gatha">Explore Shayaris <span>→</span></a>
+      </div>
+      <div class="hero-scene" aria-hidden="true">
+        <div class="moon"></div><div class="window"><div class="rain"></div></div>
+        <div class="book-stack"><div class="book"></div><div class="book"></div><div class="paper"></div></div>
+      </div>
+    </section>
+
+    <section class="section" id="my-gatha">
+      <div class="section-heading">
+        <p class="eyebrow">Words that stay</p>
+        <h2>My Gatha</h2>
+        <p>Shayaris for feelings that are sometimes difficult to put into words.</p>
+      </div>
+      <div class="shayari-grid">
+        <article class="shayari-card"><div class="card-image rain-image"><span>☾</span></div><div class="card-body"><span class="tag">Feelings</span><h3>Khamoshi</h3><p>“Kuch baatein lafzon ki mohtaaj nahi hoti,<br>khamoshi bhi kabhi poori kahani keh jaati hai.”</p><button class="like-btn" data-post="static-1">♡ <span>Like</span></button></div></article>
+        <article class="shayari-card"><div class="card-image rose-image"><span>✿</span></div><div class="card-body"><span class="tag">Memories</span><h3>Yaadein</h3><p>“Yaadon ka bhi ajeeb sa safar hota hai,<br>door rehkar bhi koi dil ke paas hota hai.”</p><button class="like-btn" data-post="static-2">♡ <span>Like</span></button></div></article>
+        <article class="shayari-card"><div class="card-image moon-image"><span>☽</span></div><div class="card-body"><span class="tag">Raat</span><h3>Raat Ke Alfaaz</h3><p>“Raat chup hoti hai, magar dil nahi,<br>kuch sawaal jagte hain jab duniya soti hai.”</p><button class="like-btn" data-post="static-3">♡ <span>Like</span></button></div></article>
+        <article class="shayari-card"><div class="card-image letter-image"><span>✉</span></div><div class="card-body"><span class="tag">Hope</span><h3>Kal</h3><p>“Har dard hamesha nahi rehta,<br>kabhi subah bhi aati hai lambi raat ke baad.”</p><button class="like-btn" data-post="static-4">♡ <span>Like</span></button></div></article>
+      </div>
+    </section>
+
+    <section class="thought-section" id="your-thought">
+      <div class="thought-decoration" aria-hidden="true"><span>✿</span><span>✉</span><span>☾</span></div>
+      <div class="thought-copy">
+        <p class="eyebrow">Your words matter</p>
+        <h2>Your Thought</h2>
+        <p>Share a thought, a feeling, or your own Shayari. A nickname is optional.</p>
+        <p class="small-note">Every submission goes into moderation first. Only approved posts are shown publicly.</p>
+      </div>
+      <form id="thoughtForm" class="thought-form">
+        <label>Nickname <span>(optional)</span><input id="name" type="text" maxlength="40" placeholder="Anonymous"></label>
+        <label>Your thought<textarea id="thought" rows="6" maxlength="600" required placeholder="Write what is on your mind..."></textarea></label>
+        <label>Category<select id="category"><option>Thought</option><option>Shayari</option><option>Memories</option><option>Life</option><option>Hope</option></select></label>
+        <button class="primary-btn" type="submit">Submit for Review <span>→</span></button>
+        <p id="formMessage" class="form-message" role="status"></p>
+      </form>
+    </section>
+
+    <section class="section community" aria-live="polite">
+      <div class="section-heading"><p class="eyebrow">From the community</p><h2>Recent Thoughts</h2><p id="communityStatus">Loading approved thoughts…</p></div>
+      <div id="thoughtList" class="thought-list"></div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div><p class="eyebrow">Stay connected</p><h2>Contact</h2><p>Have a suggestion for Meri Gatha? Send a message.</p></div>
+      <form id="contactForm" class="contact-form">
+        <input id="contactName" type="text" maxlength="60" placeholder="Your name" required>
+        <input id="contactEmail" type="email" maxlength="120" placeholder="Your email" required>
+        <textarea id="contactText" rows="4" maxlength="1000" placeholder="Your message" required></textarea>
+        <button class="secondary-btn" type="submit">Send Message</button>
+        <p id="contactMessage" class="form-message" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">Meri Gatha <span>✦</span></div>
+    <p>“Some stories are not just told, they are felt.”</p>
+    <small>© 2026 Meri Gatha · A space for words, feelings & expression.</small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
